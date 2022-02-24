@@ -4,6 +4,12 @@ class Movie < ApplicationRecord
   belongs_to :director,
              counter_cache: :filmography_count
 
+  has_many   :reviews,
+             dependent: :destroy
+
+  has_many   :bookmarks,
+             dependent: :destroy
+
   has_many   :roles,
              dependent: :destroy
 
