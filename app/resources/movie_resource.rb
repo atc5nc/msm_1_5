@@ -13,6 +13,10 @@ class MovieResource < ApplicationResource
 
   belongs_to :director
 
+  has_many   :reviews
+
+  has_many   :bookmarks
+
   has_many   :roles
 
   # Indirect associations
